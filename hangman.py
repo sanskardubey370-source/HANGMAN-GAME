@@ -1,26 +1,3 @@
-=================================
-      WELCOME TO HANGMAN         
-=================================
-
-Word to guess:  _ _ _ _ 
-Lives remaining: 6
----------------------------------
-Please enter a letter: p
-Nice! 'p' is in the word.
-
-Word to guess:  l o o p 
-Lives remaining: 6
----------------------------------
-
-*** CONGRATULATIONS! ***
-You guessed the word: LOOP
-You are a Python Master!# ---------------------------------------------------------
-# Project: Hangman Game (Task 1)
-# Author: Intern (B.Tech 2nd Year)
-# Description: A text-based game where you guess the word.
-#              Created for Python training module.
-# ---------------------------------------------------------
-
 import random
 
 def start_game():
@@ -35,14 +12,12 @@ def start_game():
     guessed_letters = []  # List to store letters user has tried
     game_over = False
 
-    # Added some ASCII art to make it look better! 
     print("=================================")
     print("      WELCOME TO HANGMAN         ")
     print("=================================")
     
     while not game_over:
         # 1. Print current status of the word
-        # This loop creates the "_ _ a _" string
         display_string = ""
         for letter in secret_word:
             if letter in guessed_letters:
@@ -94,5 +69,5 @@ def start_game():
             lives_left -= 1
             print(f"Oops! '{user_guess}' is NOT in the word.")
 
-# Calling the function to run the code
-start_game()
+if __name__ == "__main__":
+    start_game()
